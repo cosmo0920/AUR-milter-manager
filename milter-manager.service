@@ -1,0 +1,13 @@
+[Unit]
+Description=milter-manager server daemon
+After=syslog.target network.target auditd.service
+
+[Service]
+PIDFile=/var/run/milter-manager/milter-manager.pid
+User=milter-manager
+Group=milter-manager
+ExecStart=/usr/sbin/milter-manager $OPTIONS
+ExecReload=/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
