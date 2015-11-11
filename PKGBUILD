@@ -39,6 +39,7 @@ build() {
 
 package() {
   cd "${srcdir}/${pkgname}"
+  install=milter-manager.install
   make DESTDIR="$pkgdir/" install
 
   install -Dm644 ../milter-manager.service "$pkgdir"/usr/lib/systemd/system/milter-manager.service
