@@ -4,18 +4,19 @@ pkgrel=1
 pkgdesc="A milter to use milters effectively."
 arch=('x86' 'x86_64')
 url="http://milter-manager.sourceforge.net/"
-license=('GPL3')
+license=('GPL3' 'GFDL' 'LGPL3')
 depends=('sh')
-makedepends=('git' 'ruby-glib2' 'rrdtool' 'glib2' 'autoconf' 'automake' 'libtool' 'pkg-config'
-             'intltool' 'gtk-doc' 'gnome-doc-utils' 'inkscape' 'ruby')
-optdepends=('cutter-test_framework')
+makedepends=('git' 'ruby-glib2' 'rrdtool' 'glib2'
+             'autoconf' 'automake' 'libtool' 'pkg-config' 'intltool'
+             'gtk-doc' 'gnome-doc-utils' 'inkscape' 'ruby')
+optdepends=('cutter-test_framework' 'ruby-rdtool' 'lcov')
 provides=('libev')
 conflicts=('libev')
 
 source=("$pkgname"::"git://github.com/milter-manager/milter-manager.git"
         milter-manager.service)
-md5sums=('SKIP'
-         'SKIP')
+sha1sums=('SKIP'
+          'SKIP')
 
 pkgver () {
   _date=`date +"%Y%m%d"`
@@ -32,7 +33,6 @@ build() {
     --sysconfdir=/etc \
     --sbindir=/usr/bin \
     --enable-ruby-milter
-    # --enable-gtk-doc # FIXME
 
   make
 }
