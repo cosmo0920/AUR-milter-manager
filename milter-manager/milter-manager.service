@@ -6,7 +6,7 @@ After=syslog.target network.target auditd.service
 PIDFile=/var/run/milter-manager/milter-manager.pid
 User=milter-manager
 Group=milter-manager
-ExecStart=/usr/sbin/milter-manager $OPTIONS
+ExecStart=/usr/bin/milter-manager $OPTIONS
 ExecReload=/bin/kill -HUP $MAINPID
 
 [Install]
