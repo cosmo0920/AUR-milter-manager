@@ -11,7 +11,7 @@ makedepends=('git' 'ruby-glib2' 'rrdtool' 'glib2'
              'gtk-doc' 'gnome-doc-utils' 'inkscape' 'ruby')
 optdepends=('cutter-test_framework' 'ruby-rdtool' 'lcov')
 provides=('libev')
-conflicts=('libev')
+conflicts=('libev' 'libevent')
 
 source=("$pkgname"::"git://github.com/milter-manager/milter-manager.git"
         milter-manager.service)
