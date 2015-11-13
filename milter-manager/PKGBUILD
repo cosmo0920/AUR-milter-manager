@@ -8,7 +8,7 @@ license=('GPL3' 'GFDL' 'LGPL3')
 depends=('sh')
 makedepends=('git' 'ruby-glib2' 'rrdtool' 'glib2'
              'autoconf' 'automake' 'libtool' 'pkg-config' 'intltool'
-             'gtk-doc' 'gnome-doc-utils' 'inkscape' 'ruby')
+             'gtk-doc' 'gnome-doc-utils' 'inkscape' 'ruby' 'libevent')
 optdepends=('cutter-test_framework' 'ruby-rdtool' 'lcov')
 provides=('libev')
 conflicts=('libev')
