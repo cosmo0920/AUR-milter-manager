@@ -43,7 +43,7 @@ package() {
   make DESTDIR="$pkgdir/" install
 
   # remove conflicting file
-  rm "$pkgdir"/usr/include/event.h
+  rm -f "$pkgdir"/usr/include/event.h
 
   install -Dm644 ../milter-manager.service "$pkgdir"/usr/lib/systemd/system/milter-manager.service
 }
