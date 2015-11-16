@@ -8,3 +8,7 @@ AUR PKGBUILD for milter-manager
 ## Any (Ruby package)
 
 * rdtool
+
+### armv7h test environment
+
+* Arch Linux armv7h on Wandboard dual
