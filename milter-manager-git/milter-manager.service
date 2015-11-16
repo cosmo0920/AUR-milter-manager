@@ -1,6 +1,6 @@
 [Unit]
 Description=milter-manager server daemon
-After=syslog.target network.target auditd.service
+After=syslog.target network-online.target
 
 [Service]
 User=milter-manager
